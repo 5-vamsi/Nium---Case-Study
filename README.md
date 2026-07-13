@@ -284,9 +284,17 @@ streamlit run dashboard/app.py
 ```
 
 ---
+
+## Hosted PostgreSQL Database
+
+This project uses a hosted PostgreSQL database on Neon.
+
+For security reasons, administrative credentials are not included in this repository. The SQL schema and ETL pipeline are provided so the database can be recreated easily.
+
+---
 # Reflection
 
-## Key Design Choices
+## Key Design Choices   
 
 The solution was designed as an end-to-end Business Intelligence pipeline to transform raw coffee market data into actionable business insights. Rather than analyzing the data directly from raw files, I implemented a structured ETL process followed by a PostgreSQL data warehouse and an interactive Streamlit dashboard.
 

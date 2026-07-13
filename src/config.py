@@ -61,13 +61,9 @@ COUNTRY_MAPPING_FILE = (
 # ==========================================================
 
 DB_NAME = "coffee_market_db"
-
-DB_USER = "neondb_owner"
-
-DB_PASSWORD = "npg_QiXmsrMh8z4a"
-
-DB_HOST = "ep-calm-king-a7ai2jcc-pooler.ap-southeast-2.aws.neon.tech"
-
+DB_USER = "chiruhasbonam"
+DB_PASSWORD = ""
+DB_HOST = "localhost"
 DB_PORT = "5432"
 
 # ==========================================================
