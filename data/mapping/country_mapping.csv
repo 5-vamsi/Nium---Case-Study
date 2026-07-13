@@ -1,0 +1,14 @@
+coffee_country_name,population_country_name,country_codes_name,iso3_code,mapping_type,mapping_reason
+Vietnam,Viet Nam,Viet Nam,VNM,Manual,World Bank naming convention
+Russia,Russian Federation,Russian Federation,RUS,Manual,Official country name
+Iran,"Iran, Islamic Rep.","Iran (Islamic Republic of)",IRN,Manual,World Bank naming convention
+Egypt,"Egypt, Arab Rep.",Egypt,EGY,Manual,World Bank naming convention
+Turkey,Turkiye,Turkey,TUR,Manual,Official country rename
+Korea, South,"Korea, Rep.","Korea (Republic of)",KOR,Manual,Country naming convention
+Laos,Lao PDR,"Lao People's Democratic Republic",LAO,Manual,Official country name
+Venezuela,"Venezuela, RB",Venezuela,VEN,Manual,World Bank naming convention
+Congo (Brazzaville),"Congo, Rep.","Congo",COG,Manual,Country alias
+Congo (Kinshasa),"Congo, Dem. Rep.","Democratic Republic of the Congo",COD,Manual,Country alias
+Taiwan,,Taiwan, China,TWN,Manual,Not available in World Bank dataset
+Yemen,"Yemen, Rep.",Yemen,YEM,Manual,World Bank naming convention
+Yemen (Sanaa),"Yemen, Rep.",Yemen,YEM,Historical,Historical reporting entity

@@ -1,0 +1,95 @@
+coffee_country,population_match,match_type
+Albania,Albania,Exact
+Algeria,Algeria,Exact
+Angola,Angola,Exact
+Argentina,Argentina,Exact
+Armenia,Armenia,Exact
+Australia,Australia,Exact
+Benin,Benin,Exact
+Bolivia,Bolivia,Exact
+Bosnia and Herzegovina,Bosnia and Herzegovina,Exact
+Brazil,Brazil,Exact
+Burundi,Burundi,Exact
+Cameroon,Cameroon,Exact
+Canada,Canada,Exact
+Central African Republic,Central African Republic,Exact
+Chile,Chile,Exact
+China,China,Exact
+Colombia,Colombia,Exact
+Congo (Brazzaville),"Congo, Rep.",Alias
+Congo (Kinshasa),"Congo, Dem. Rep.",Alias
+Costa Rica,Costa Rica,Exact
+Cote d'Ivoire,Cote d'Ivoire,Exact
+Croatia,Croatia,Exact
+Cuba,Cuba,Exact
+Dominican Republic,Dominican Republic,Exact
+Ecuador,Ecuador,Exact
+Egypt,"Egypt, Arab Rep.",Alias
+El Salvador,El Salvador,Exact
+Equatorial Guinea,Equatorial Guinea,Exact
+Ethiopia,Ethiopia,Exact
+European Union,European Union,Exact
+Gabon,Gabon,Exact
+Georgia,Georgia,Exact
+Ghana,Ghana,Exact
+Guatemala,Guatemala,Exact
+Guinea,Guinea,Exact
+Guyana,Guyana,Exact
+Haiti,Haiti,Exact
+Honduras,Honduras,Exact
+India,India,Exact
+Indonesia,Indonesia,Exact
+Iran,"Iran, Islamic Rep.",Alias
+Jamaica,Jamaica,Exact
+Japan,Japan,Exact
+Jordan,Jordan,Exact
+Kazakhstan,Kazakhstan,Exact
+Kenya,Kenya,Exact
+"Korea, South","Korea, Rep.",Alias
+Kosovo,Kosovo,Exact
+Laos,Lao PDR,Alias
+Liberia,Liberia,Exact
+Madagascar,Madagascar,Exact
+Malawi,Malawi,Exact
+Malaysia,Malaysia,Exact
+Mexico,Mexico,Exact
+Montenegro,Montenegro,Exact
+Morocco,Morocco,Exact
+New Caledonia,New Caledonia,Exact
+New Zealand,New Zealand,Exact
+Nicaragua,Nicaragua,Exact
+Nigeria,Nigeria,Exact
+North Macedonia,North Macedonia,Exact
+Norway,Norway,Exact
+Panama,Panama,Exact
+Papua New Guinea,Papua New Guinea,Exact
+Paraguay,Paraguay,Exact
+Peru,Peru,Exact
+Philippines,Philippines,Exact
+Russia,Russian Federation,Alias
+Rwanda,Rwanda,Exact
+Saudi Arabia,Saudi Arabia,Exact
+Senegal,Senegal,Exact
+Serbia,Serbia,Exact
+Sierra Leone,Sierra Leone,Exact
+Singapore,Singapore,Exact
+South Africa,South Africa,Exact
+Sri Lanka,Sri Lanka,Exact
+Switzerland,Switzerland,Exact
+Taiwan,,Manual Review
+Tanzania,Tanzania,Exact
+Thailand,Thailand,Exact
+Togo,Togo,Exact
+Trinidad and Tobago,Trinidad and Tobago,Exact
+Turkey,Turkiye,Alias
+Uganda,Uganda,Exact
+Ukraine,Ukraine,Exact
+United Kingdom,United Kingdom,Exact
+United States,United States,Exact
+Uruguay,Uruguay,Exact
+Venezuela,"Venezuela, RB",Alias
+Vietnam,Viet Nam,Alias
+Yemen,"Yemen, Rep.",Alias
+Yemen (Sanaa),,Manual Review
+Zambia,Zambia,Exact
+Zimbabwe,Zimbabwe,Exact
