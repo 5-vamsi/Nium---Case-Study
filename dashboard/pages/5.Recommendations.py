@@ -11,16 +11,80 @@ st.set_page_config(
 
 st.title("💡 Business Recommendations")
 
-st.markdown(
-    """
-    Key business insights derived from production,
-    consumption and international trade patterns.
-    """
-)
+st.markdown("""
+This page summarizes the final business recommendations for ACME Baristas
+based on the insights generated from the analytical dashboards.
+""")
 
-# ---------------------------------------------------
+# ==========================================================
+# TOP RECOMMENDED MARKETS
+# ==========================================================
+
+st.header("🏆 Recommended Markets for ACME Baristas")
+
+st.info("""
+The recommended markets were identified by combining insights from multiple dashboard pages.
+The analysis considered coffee consumption, coffee imports, per-capita consumption,
+population size and historical market trends rather than relying on a single metric.
+""")
+
+st.markdown("""
+### 🥇 United States
+
+**Why was it selected?**
+
+- High overall coffee consumption indicates strong market demand.
+- Large population provides a broad potential customer base.
+- Strong coffee import volumes suggest sustained domestic demand.
+- Historical trends demonstrate consistent coffee consumption.
+
+**Supporting Dashboard Pages**
+
+- **Market Intelligence** → Top Coffee Consumers
+- **Market Intelligence** → Coffee Import Analysis
+- **Country Explorer** → Country-level market insights
+- **Trend Analysis** → Historical demand trends
+
+---
+
+### 🥈 Japan
+
+**Why was it selected?**
+
+- High dependence on coffee imports.
+- Strong per-capita coffee consumption.
+- Stable long-term demand indicates a mature coffee market.
+
+**Supporting Dashboard Pages**
+
+- **Market Intelligence** → Import Analysis
+- **Market Intelligence** → Per-Capita Consumption
+- **Country Explorer**
+- **Trend Analysis**
+
+---
+
+### 🥉 Canada
+
+**Why was it selected?**
+
+- Strong coffee consumption relative to population.
+- Consistent import activity indicates stable market demand.
+- Long-term trends support continued market potential.
+
+**Supporting Dashboard Pages**
+
+- **Market Intelligence** → Consumption Analysis
+- **Market Intelligence** → Import Analysis
+- **Country Explorer**
+- **Trend Analysis**
+""")
+
+# ==========================================================
 # Production Surplus
-# ---------------------------------------------------
+# ==========================================================
+
+st.header("🌍 Production Surplus Analysis")
 
 surplus = run_query("""
 SELECT
@@ -41,18 +105,22 @@ fig = px.bar(
 
 st.plotly_chart(fig, use_container_width=True)
 
-st.success(
-"""
-Recommendation
+st.success("""
+### Business Insight
 
-These countries consistently produce more coffee than they consume,
-making them attractive export partners and suppliers.
-"""
-)
+Countries with a large production surplus consistently produce more coffee than they consume.
 
-# ---------------------------------------------------
+**Opportunity**
+
+These countries can serve as reliable sourcing partners and suppliers
+for ACME Baristas' global supply chain.
+""")
+
+# ==========================================================
 # Production Deficit
-# ---------------------------------------------------
+# ==========================================================
+
+st.header("📦 Production Deficit Analysis")
 
 deficit = run_query("""
 SELECT
@@ -73,81 +141,74 @@ fig = px.bar(
 
 st.plotly_chart(fig, use_container_width=True)
 
-st.warning(
-"""
-Recommendation
+st.warning("""
+### Business Insight
 
-These markets depend on imports and may represent attractive
-opportunities for exporters and distributors.
-"""
-)
+Countries with large production deficits consume more coffee than they produce.
 
-# ---------------------------------------------------
-# Import Dependency
-# ---------------------------------------------------
+**Opportunity**
 
-imports = run_query("""
-SELECT
-    country_name,
-    ROUND(
-        SUM(imports) /
-        NULLIF(SUM(domestic_consumption),0),
-        2
-    ) AS dependency
-FROM vw_coffee_market
-GROUP BY country_name
-ORDER BY dependency DESC
-LIMIT 10;
+These markets rely heavily on imports and represent attractive expansion
+opportunities for coffee retailers and distributors.
 """)
 
-fig = px.bar(
-    imports,
-    x="country_name",
-    y="dependency",
-    title="Highest Import Dependency"
-)
+# ==========================================================
+# Executive Summary
+# ==========================================================
 
-st.plotly_chart(fig, use_container_width=True)
+st.header("📋 Executive Business Conclusions")
 
-# ---------------------------------------------------
-# Export Dependency
-# ---------------------------------------------------
+st.success("""
+### Business Question 1
 
-exports = run_query("""
-SELECT
-    country_name,
-    ROUND(
-        SUM(exports) /
-        NULLIF(SUM(production),0),
-        2
-    ) AS dependency
-FROM vw_coffee_market
-GROUP BY country_name
-ORDER BY dependency DESC
-LIMIT 10;
-""")
+**Which three markets should ACME Baristas enter?**
 
-fig = px.bar(
-    exports,
-    x="country_name",
-    y="dependency",
-    title="Highest Export Dependency"
-)
+Based on the combined analysis across the dashboard, the recommended
+markets are:
 
-st.plotly_chart(fig, use_container_width=True)
+1. 🇺🇸 United States
+2. 🇯🇵 Japan
+3. 🇨🇦 Canada
 
-# ---------------------------------------------------
-# Final Summary
-# ---------------------------------------------------
+The recommendation is supported by insights from:
 
-st.header("Executive Summary")
+• Market Intelligence Dashboard
+• Country Explorer Dashboard
+• Trend Analysis Dashboard
 
-st.markdown("""
-### Key Findings
+---
 
-- Global coffee production is concentrated among a small number of countries.
-- Several countries consistently produce more coffee than they consume, supporting strong export markets.
-- Import-dependent countries present potential opportunities for exporters.
-- Coffee consumption continues to grow in many markets, indicating sustained long-term demand.
-- Population-adjusted consumption highlights mature coffee-drinking markets that differ from simply looking at total consumption.
+### Business Question 2
+
+**Is this a good time to enter the coffee market?**
+
+Yes.
+
+Historical production and consumption trends indicate sustained
+global coffee demand, while import-dependent markets continue to
+offer attractive expansion opportunities.
+
+---
+
+### Business Question 3
+
+**Opportunities**
+
+• Growing global coffee demand
+
+• Import-dependent consumer markets
+
+• Large and mature coffee-drinking populations
+
+• Long-term market growth potential
+
+**Risks**
+
+• Climate impacts on coffee production
+
+• Commodity price fluctuations
+
+• Supply chain disruptions
+
+• Strong competition from established coffee brands
 """)
